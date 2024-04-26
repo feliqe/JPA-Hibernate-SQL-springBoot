@@ -1,0 +1,56 @@
+JPA e hibernate
+
+-- es una herramienta de ORM, para la maniupulacion los datos de la BD  de forma a de clase y objeto.
+-- tipos lenguajes hibernase query lenguaje(HQL), criteria API, SQL nativo
+-- asociacionismo @ManytoOne, @OnetoMany, @OnetoOne, @ManytoMany
+-- pagina de documentación para Spring JPA
+	https://docs.spring.io/spring-data/jpa/reference/repositories/query-by-example.html
+-----------------------------------------------------------------------------------
+Dependencias de proyecto
+* mySQL driver
+* spring data JPA
+* spring boot devTools
+
+Se mostraran el resulatdo por consola
+
+paso de la  gestions
+- en application.properties es donde se realiza la configuracion de la conexion al base de datos
+- para crear campos que se pre inserten al moento de crear la tabla se crea una hoja co extencion SQL en resoruces, se ingresar los INSERT INTO que se insertaran al tabla despues de crear la  tablas, segun las clases creadas.
+- se crea la modal de person donde estaran los datos de la tabla
+- en PersonRepository se crea las funciones de buscador y listar
+- en SpringbootJpaApplication es donde se realiza la funciones crud de SQL create, update, delete, select usando las funciones de buscar y listar de PersonRepository
+- DTO - consultas personalizadas se crea el package Dto donde tendras las class (models) donde se definnira los campos que se desea mostra en la listas, es como un select pero con le interprete de spring usando las class (models)
+- consultas con funciones de SQL de contar caracter como numero y  consultas dinamicas con varias condiciones
+
+-----------------------------------------------------------------------------------
+orden de archivos crear y ejecutar
+- SpringbootJpaApplication
+	se crear la implements y el metodo
+			implements CommandLineRunner
+- se crear el package entities
+	-- class Person
+- package repositories
+	-- class PersonRepository
+- resources
+	-- campo de configuración
+		---se configura la conexion y la configuracion de consulas a la base de datos de MySQL
+**descargar e instalar MySQL
+	-- https://dev.mysql.com/downloads/
+	-- se descargar el MySQL community Server version (macOS 13 (ARM, 64-bit), DMG Archive)
+	-- se descargara y seguir los pasos de la instalacion del sistema, colcoar credenciales esteblecidas en application.properties
+	-- se descarga DBeaver para visulizar base de datos MySQL
+		--- si hay problemas al realizar la conexion se tiene que liminar la validacion de SLL
+	-- para crear los cmaspos en la base de datos se tiene que correr el codigo, esto es solo a nivel de pruebas ya que cvada ves que se inica el sistema borrar la informaicon de las tabla ya que la creara denuevo.
+- se crear el archivo import.sql en resources
+	-- es para cuando se inicie a correr el sistema ejecute el contenido de este archivo (contiene los insert)
+- se crea el package dto y se crear la class PersonDto
+
+
+
+
+
+
+
+
+
+

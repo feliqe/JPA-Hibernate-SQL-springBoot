@@ -1,0 +1,5 @@
+INSERT INTO persons (name, lastname, programing_lenguaje) VALUES ('Andres','Guzman','Java')
+INSERT INTO persons (name, lastname, programing_lenguaje) VALUES ('Pepe','Doe','Python')
+INSERT INTO persons (name, lastname, programing_lenguaje) VALUES ('John', 'Dow','JavaScript')
+INSERT INTO persons (name, lastname, programing_lenguaje) VALUES ('Maria', 'Roe','Java')
+INSERT INTO persons (name, lastname, programing_lenguaje) VALUES ('Josefa', 'Rae','Java')
