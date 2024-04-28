@@ -21,6 +21,7 @@ paso de la  gestions
 - en SpringbootJpaApplication es donde se realiza la funciones crud de SQL create, update, delete, select usando las funciones de buscar y listar de PersonRepository
 - DTO - consultas personalizadas se crea el package Dto donde tendras las class (models) donde se definnira los campos que se desea mostra en la listas, es como un select pero con le interprete de spring usando las class (models)
 - consultas con funciones de SQL de contar caracter como numero y  consultas dinamicas con varias condiciones
+- el CICLOD E PERSISTENCIA es referente a la fecha en donde se ejecuta la accion de create, update, delete
 
 -----------------------------------------------------------------------------------
 orden de archivos crear y ejecutar

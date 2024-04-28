@@ -1,6 +1,7 @@
 package com.feliqe.springboot.jpa.springbootjpa.entities;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -24,6 +25,13 @@ public class Person {
     //en caso que tenga un caracter que no se puede colocar en la clase se mapea el campo, en este caso con _ entre las palabras
     @Column(name = "programing_lenguaje")
     private String programingLenguaje;
+
+    // ---------- Metodo de ciclo de persistencia --------------------
+    // @Embedded - es donde realizamos la referencia a la clase de Aduit referenciada
+    @Embedded
+    //variable para poder referecnias campos de la clase referenciada
+    //creamos la instancia
+    private Audit audit = new Audit();
 
     //se usas el constructor vacio para pasar los datos, siempre vacio para JPA
     public Person() {
@@ -73,6 +81,6 @@ public class Person {
     @Override
     public String toString() {
         return "[id=" + id + ", name=" + name + ", lastname=" + lastname + ", programingLenguaje="
-                + programingLenguaje + "]";
+                + programingLenguaje + ", createAt="+audit.getCreatAt()+", updatedAt="+audit.getUpdatedAt()+"]";
     }
 }
