@@ -26,8 +26,8 @@ Los resultados se mostraran por consola.
 - consultas con funciones de SQL de contar carácter como número y  consultas dinámicas con varias condiciones
 - el CICLOD E PERSISTENCIA es referente a la fecha en donde se ejecuta la acción de create, update, delete
 
------------------------------------------------------------------------------------
-orden de archivos crear y ejecutar
+--------------------------ORDEN DE CREACION DE DOCUMENTOS-----------------------
+
 - SpringbootJpaApplication
 	se crear la implementas y el método
 			implements CommandLineRunner
